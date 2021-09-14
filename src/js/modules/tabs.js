@@ -7,11 +7,13 @@ const tabs = (headerSelector,tabSelector, contentSelector,activeClass) => {
         content.forEach(item => {
             item.style.display = 'none';
         });
+
+        tab.forEach(item => {
+            item.classList.remove(activeClass);
+        });
     }
 
-    tab.forEach(item => {
-        item.classList.remove(activeClass);
-    })
+
 
     function showTabContent (i=0){
         content[i].style.display = "block";
